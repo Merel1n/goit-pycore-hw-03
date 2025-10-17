@@ -33,26 +33,11 @@
 
 from datetime import datetime
 
-date_input=input("Enter the date ")
+date="2020-10-09"
 now_date = datetime.today()
 
 try:
-    date = datetime.strptime(date_input, "%Y-%m-%d")
-except ValueError:
-    pass
-
-try:
-    date = datetime.strptime(date_input, "%Y/%m/%d")
-except ValueError:
-    pass
-
-try:
-    date = datetime.strptime(date_input, "%d/%m/%Y")
-except ValueError:
-    pass
-
-try:
-    date = datetime.strptime(date_input, "%d-%m-%Y")
+    date = datetime.strptime(date, "%Y-%m-%d")
 except ValueError:
     pass
 

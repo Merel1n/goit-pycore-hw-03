@@ -52,9 +52,10 @@ min = int(input("Мінімальне можливе число у наборі 
 max = int(input("Максимальне можливе число у наборі (не більше 1000) "))
 quantity = int(input("Кількість чисел, які потрібно вибрати (значення між min і max) "))
 
-
-
 def get_numbers(min : int, max : int, quantity : int) -> list[int] :
+    # Робимо перевірку вірності введених даних
+    if min < 1 or max > 1000 or quantity < 1 or quantity > (max - min + 1):
+        return []
     numbers = random.sample(range(min, max+1), quantity)
     return(sorted(numbers))
 
