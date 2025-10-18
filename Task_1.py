@@ -34,19 +34,19 @@
 from datetime import datetime
 
 date="2020-10-09"
-now_date = datetime.today()
+
 
 try:
     date = datetime.strptime(date, "%Y-%m-%d")
 except ValueError:
     pass
 
-def get_days_from_today(date, now_date):
-    
+def get_days_from_today(date):
+    now_date = datetime.today()
     difference = (now_date - date).days
     print (f"Difference between current date and given date {difference}")
 
-get_days_from_today(date, now_date)
+get_days_from_today(date)
 
 
 
